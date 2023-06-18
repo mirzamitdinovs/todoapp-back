@@ -11,20 +11,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 const port = 5000;
 
-let todos = [
-	{
-		id: 1,
-		title: 'delectus aut autem',
-		completed: false,
-		date: new Date(),
-	},
-	{
-		id: 2,
-		title: 'quis ut nam facilis et officia qui',
-		completed: true,
-		date: new Date(),
-	},
-];
+let todos = [];
 
 app.get('/todos/:status', (req, res) => {
 	const { status } = req.params;
